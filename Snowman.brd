@@ -50,6 +50,8 @@
 <layer number="54" name="bGND_GNDA" color="1" fill="9" visible="no" active="no"/>
 <layer number="56" name="wert" color="7" fill="1" visible="no" active="no"/>
 <layer number="57" name="tCAD" color="7" fill="1" visible="no" active="no"/>
+<layer number="59" name="tCarbon" color="7" fill="1" visible="no" active="no"/>
+<layer number="60" name="bCarbon" color="7" fill="1" visible="no" active="no"/>
 <layer number="90" name="Modules" color="5" fill="1" visible="no" active="no"/>
 <layer number="91" name="Nets" color="2" fill="1" visible="no" active="no"/>
 <layer number="92" name="Busses" color="1" fill="1" visible="no" active="no"/>
@@ -75,6 +77,7 @@
 <layer number="112" name="tSilk" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="113" name="IDFDebug" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="116" name="Patch_BOT" color="9" fill="4" visible="yes" active="yes"/>
+<layer number="118" name="Rect_Pads" color="7" fill="1" visible="no" active="no"/>
 <layer number="121" name="_tsilk" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="122" name="_bsilk" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="123" name="tTestmark" color="7" fill="1" visible="yes" active="yes"/>
@@ -83,6 +86,7 @@
 <layer number="126" name="_bNames" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="127" name="_tValues" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="128" name="_bValues" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="129" name="Mask" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="131" name="tAdjust" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="132" name="bAdjust" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="144" name="Drill_legend" color="7" fill="1" visible="yes" active="yes"/>
@@ -125,6 +129,8 @@
 <layer number="229" name="229bmp" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="230" name="230bmp" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="231" name="231bmp" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="232" name="Eagle3D_PG2" color="7" fill="1" visible="no" active="no"/>
+<layer number="233" name="Eagle3D_PG3" color="7" fill="1" visible="no" active="no"/>
 <layer number="248" name="Housing" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="249" name="Edge" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="250" name="Descript" color="3" fill="1" visible="no" active="no"/>
@@ -277,6 +283,20 @@ userhackable.com/snowman</text>
 <pad name="4" x="3.2512" y="-2.2606" drill="1.016" diameter="1.8796"/>
 <text x="-2.54" y="3.81" size="1.27" layer="25" ratio="10">&gt;NAME</text>
 </package>
+<package name="AXIAL-0.3">
+<wire x1="-2.54" y1="0.762" x2="2.54" y2="0.762" width="0.2032" layer="21"/>
+<wire x1="2.54" y1="0.762" x2="2.54" y2="0" width="0.2032" layer="21"/>
+<wire x1="2.54" y1="0" x2="2.54" y2="-0.762" width="0.2032" layer="21"/>
+<wire x1="2.54" y1="-0.762" x2="-2.54" y2="-0.762" width="0.2032" layer="21"/>
+<wire x1="-2.54" y1="-0.762" x2="-2.54" y2="0" width="0.2032" layer="21"/>
+<wire x1="-2.54" y1="0" x2="-2.54" y2="0.762" width="0.2032" layer="21"/>
+<wire x1="2.54" y1="0" x2="2.794" y2="0" width="0.2032" layer="21"/>
+<wire x1="-2.54" y1="0" x2="-2.794" y2="0" width="0.2032" layer="21"/>
+<pad name="P$1" x="-3.81" y="0" drill="0.9" diameter="1.8796"/>
+<pad name="P$2" x="3.81" y="0" drill="0.9" diameter="1.8796"/>
+<text x="-2.54" y="0.9525" size="0.4064" layer="25" font="vector">&gt;Name</text>
+<text x="-2.2225" y="0" size="0.8128" layer="21" font="vector" ratio="15" align="center-left">&gt;Value</text>
+</package>
 </packages>
 </library>
 <library name="battery">
@@ -368,6 +388,47 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <pad name="8" x="-3.81" y="3.81" drill="0.8128" diameter="1.7272" shape="octagon"/>
 <text x="-3.175" y="-0.635" size="1.27" layer="27" ratio="10">&gt;VALUE</text>
 <text x="-5.715" y="-3.81" size="1.27" layer="25" ratio="10" rot="R90">&gt;NAME</text>
+</package>
+</packages>
+</library>
+<library name="logo">
+<packages>
+<package name="USER_HACKABLE">
+<polygon width="0.127" layer="21">
+<vertex x="3.03559375" y="1.7526"/>
+<vertex x="3.03559375" y="-1.7526"/>
+<vertex x="0" y="-3.5052"/>
+<vertex x="-3.03559375" y="-1.7526"/>
+<vertex x="-3.03559375" y="1.7526"/>
+<vertex x="-3.0284875" y="4.84659375"/>
+<vertex x="-4.691340625" y="6.004640625"/>
+<vertex x="-6.004640625" y="4.691340625"/>
+<vertex x="-4.84659375" y="3.0284875"/>
+<vertex x="-5.568525" y="1.28559375"/>
+<vertex x="-7.563203125" y="0.92864375"/>
+<vertex x="-7.563203125" y="-0.92864375"/>
+<vertex x="-5.568525" y="-1.28559375"/>
+<vertex x="-4.84659375" y="-3.0284875"/>
+<vertex x="-6.004640625" y="-4.691340625"/>
+<vertex x="-4.691340625" y="-6.004640625"/>
+<vertex x="-3.0284875" y="-4.84659375"/>
+<vertex x="-1.28559375" y="-5.568525"/>
+<vertex x="-0.92864375" y="-7.563203125"/>
+<vertex x="0.92864375" y="-7.563203125"/>
+<vertex x="1.28559375" y="-5.568525"/>
+<vertex x="3.0284875" y="-4.84659375"/>
+<vertex x="4.691340625" y="-6.004640625"/>
+<vertex x="6.004640625" y="-4.691340625"/>
+<vertex x="4.84659375" y="-3.0284875"/>
+<vertex x="5.568525" y="-1.28559375"/>
+<vertex x="7.563203125" y="-0.92864375"/>
+<vertex x="7.563203125" y="0.92864375"/>
+<vertex x="5.568525" y="1.28559375"/>
+<vertex x="4.84659375" y="3.0284875"/>
+<vertex x="6.004640625" y="4.691340625"/>
+<vertex x="4.691340625" y="6.004640625"/>
+<vertex x="3.0284875" y="4.84659375"/>
+</polygon>
 </package>
 </packages>
 </library>
@@ -562,9 +623,6 @@ Please make sure your boards conform to these design rules.</description>
 <element name="3" library="barbary_enterprises" package="LED-OVAL" value="" x="27.305" y="35.56" rot="R90"/>
 <element name="4" library="barbary_enterprises" package="LED-OVAL" value="" x="30.48" y="31.75" rot="R90"/>
 <element name="5" library="barbary_enterprises" package="LED-OVAL" value="" x="31.115" y="26.67" rot="R90"/>
-<element name="BATT" library="battery" package="CR2032-THRU" value="CR2032" x="19.05" y="9.525" smashed="yes" rot="MR180">
-<attribute name="VALUE" x="14.097" y="21.59" size="1.6764" layer="28" font="vector" rot="MR180"/>
-</element>
 <element name="J1" library="barbary_enterprises" package="2X3-NS" value="ICSP" x="8.255" y="28.575" rot="R270"/>
 <element name="MODE" library="barbary_enterprises" package="TACTILE-PTH" value="" x="5.08" y="16.51" rot="R270"/>
 <element name="SG1" library="SparkFun-Electromechanical" package="BUZZER-12MM" value="BUZZERPTH" x="13.335" y="52.705" smashed="yes" rot="R30"/>
@@ -572,10 +630,14 @@ Please make sure your boards conform to these design rules.</description>
 <attribute name="PROD_ID" value="IC-09445" x="20.32" y="26.67" size="1.778" layer="27" display="off"/>
 <attribute name="VALUE" x="20.955" y="20.955" size="1.27" layer="27" ratio="10" align="center"/>
 </element>
+<element name="R1" library="barbary_enterprises" package="AXIAL-0.3" value="1M" x="34.29" y="12.7" rot="R270"/>
+<element name="U$1" library="battery" package="CR2032-THRU" value="" x="19.05" y="9.525" smashed="yes" rot="MR180">
+<attribute name="VALUE" x="14.732" y="15.875" size="1.6764" layer="28" font="vector" rot="MR180"/>
+</element>
+<element name="U$2" library="logo" package="USER_HACKABLE" value="USER_HACKABLE" x="19.05" y="10.795"/>
 </elements>
 <signals>
 <signal name="GND">
-<contactref element="BATT" pad="-"/>
 <contactref element="U1" pad="4"/>
 <contactref element="MODE" pad="1"/>
 <contactref element="J1" pad="6"/>
@@ -589,6 +651,7 @@ Please make sure your boards conform to these design rules.</description>
 <vertex x="0" y="55.88"/>
 </polygon>
 <contactref element="MODE" pad="2"/>
+<contactref element="U$1" pad="-"/>
 </signal>
 <signal name="RST">
 <contactref element="U1" pad="1"/>
@@ -601,7 +664,6 @@ Please make sure your boards conform to these design rules.</description>
 </signal>
 <signal name="VCC">
 <contactref element="U1" pad="8"/>
-<contactref element="BATT" pad="+1"/>
 <contactref element="J1" pad="2"/>
 <wire x1="8.382" y1="9.525" x2="8.382" y2="9.652" width="0.8128" layer="1"/>
 <wire x1="8.382" y1="9.652" x2="9.525" y2="10.795" width="0.8128" layer="1"/>
@@ -610,6 +672,7 @@ Please make sure your boards conform to these design rules.</description>
 <wire x1="16.51" y1="27.94" x2="16.51" y2="30.48" width="0.8128" layer="1"/>
 <wire x1="16.51" y1="30.48" x2="15.875" y2="31.115" width="0.8128" layer="1"/>
 <wire x1="15.875" y1="31.115" x2="9.525" y2="31.115" width="0.8128" layer="1"/>
+<contactref element="U$1" pad="+1"/>
 </signal>
 <signal name="D0">
 <contactref element="U1" pad="5"/>
@@ -680,6 +743,10 @@ Please make sure your boards conform to these design rules.</description>
 <vertex x="27.94" y="19.05"/>
 <vertex x="27.94" y="0"/>
 </polygon>
+<contactref element="R1" pad="P$1"/>
+<wire x1="34.29" y1="16.51" x2="23.495" y2="16.51" width="0.8128" layer="1"/>
+<wire x1="23.495" y1="16.51" x2="19.05" y2="20.955" width="0.8128" layer="1"/>
+<wire x1="19.05" y1="20.955" x2="19.05" y2="22.86" width="0.8128" layer="1"/>
 </signal>
 <signal name="D4">
 <contactref element="U1" pad="3"/>
@@ -699,6 +766,12 @@ Please make sure your boards conform to these design rules.</description>
 <wire x1="32.385" y1="31.115" x2="30.48" y2="33.02" width="0.8128" layer="1"/>
 <wire x1="30.48" y1="33.02" x2="28.575" y2="33.02" width="0.8128" layer="1"/>
 <wire x1="28.575" y1="33.02" x2="27.305" y2="34.29" width="0.8128" layer="1"/>
+</signal>
+<signal name="VCC`">
+<contactref element="R1" pad="P$2"/>
+<contactref element="U$1" pad="+2"/>
+<wire x1="34.29" y1="8.89" x2="30.353" y2="8.89" width="0.8128" layer="1"/>
+<wire x1="30.353" y1="8.89" x2="29.718" y2="9.525" width="0.8128" layer="1"/>
 </signal>
 </signals>
 </board>

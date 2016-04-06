@@ -89,7 +89,7 @@ README.md: Intro.md $(mds)
         --f=$(SILKSCREEN_COLOR) $*.GTO \
         --f=$(PADS_COLOR) $*.GTS \
         --f=$(TOP_SOLDERMASK_COLOR) $*.GTL
-	convert $@ -alpha set -fill none -draw 'matte 0,0 floodfill' -trim $@
+	convert $@ -alpha set -fill none -draw 'matte 0,0 floodfill' \( +clone -alpha extract -negate -morphology EdgeIn Diamond -negate -transparent white \) -background none -flatten -trim +repage $@
 
 %_back.png: %.TXT %.GBO %.GBS %.GBL
 	gerbv $(GERBV_OPTIONS) --output=$@ \
@@ -97,7 +97,7 @@ README.md: Intro.md $(mds)
         --f=$(SILKSCREEN_COLOR) $*.GBO \
         --f=$(PADS_COLOR) $*.GBS \
         --f=$(TOP_SOLDERMASK_COLOR) $*.GBL
-	convert $@ -alpha set -fill none -draw 'matte 0,0 floodfill' -flop -trim +repage $@
+	convert $@ -alpha set -fill none -draw 'matte 0,0 floodfill' -flop \( +clone -alpha extract -negate -morphology EdgeIn Diamond -negate -transparent white \) -background none -flatten -trim +repage $@
 
 %.md: %.png %_back.png %.GTL
 	echo "## $* \n\n" >  $@
