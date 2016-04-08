@@ -831,12 +831,13 @@ Please make sure your boards conform to these design rules.</description>
 <contactref element="J1" pad="6"/>
 <contactref element="SG1" pad="-"/>
 <polygon width="0.4064" layer="16" isolate="0.3048">
-<vertex x="0" y="0"/>
-<vertex x="38.1" y="0"/>
-<vertex x="38.1" y="55.88"/>
-<vertex x="13.335" y="59.69"/>
-<vertex x="0" y="59.69"/>
-<vertex x="0" y="55.88"/>
+<vertex x="38.1" y="13.0175"/>
+<vertex x="38.1" y="33.02" curve="90"/>
+<vertex x="12.7" y="58.42" curve="90"/>
+<vertex x="0" y="45.72"/>
+<vertex x="0" y="13.0175" curve="90"/>
+<vertex x="13.0175" y="0"/>
+<vertex x="25.0825" y="0" curve="90"/>
 </polygon>
 <contactref element="MODE" pad="2"/>
 <contactref element="U$1" pad="-"/>
